@@ -99,7 +99,7 @@ class C9CrudUser extends Component {
           axios.put(url+'/'+cod,datos)
           .then(res =>{
             let indx = this.state.pos;
-            this.state.postulantes[indx] = res.data;
+            this.state.usuarios[indx] = res.data;
             var temp = this.state.usuarios;
             this.setState({
                 pos:null,
@@ -175,7 +175,7 @@ class C9CrudUser extends Component {
       <button className="btn btn-success "  onClick={this.AbrirModal}>Agregar</button>
       <br /><br />
           <Container>
-                  <Table striped bordered hover variant="dark">
+              <Table style={{fontWeight:"bold"}} striped borderless hover responsive bgcolor='#eee'>
                   <thead>
                     <tr>
                       <th>Id</th>
@@ -233,7 +233,7 @@ class C9CrudUser extends Component {
                     <Form.Label>Ingrese Tipo:</Form.Label>
                     <Form.Control type="text" value={this.state.tipo} onChange={this.cambioTipo} />
                   </Form.Group>
-                  <Button variant="primary" type="submit" >
+                  <Button variant="primary" type="submit" onClick={()=>{this.AbrirModal()}}>
                     GUARDAR</Button>&nbsp;&nbsp;
                     <Button id="cerrar" variant="secondary"  onClick={()=>{this.AbrirModal();this.Limpiar()}} >
                     CANCELAR</Button>

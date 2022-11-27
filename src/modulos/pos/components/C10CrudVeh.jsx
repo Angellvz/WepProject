@@ -13,49 +13,40 @@ class C10CrudVeh extends Component {
       constructor(props) {
         super(props);
         this.state= ({
-          usuarios:[],
+          vehiculos:[],
           pos:null,
-          titulo:'Agregar Usuario',
+          titulo:'Agregar Vehiculo',
           id: 0,
-          name: '',
-          correo: '',
-          password: '',
-          tipo: '',
+          placa: '',
+          arduino: '',
+          empresa: '',
         })
         
-        this.cambioName = this.cambioName.bind(this);
-        this.cambioCorreo = this.cambioCorreo.bind(this);
-        this.cambioPassword = this.cambioPassword.bind(this);
-        this.cambioTipo = this.cambioTipo.bind(this);
+        this.cambioPlaca = this.cambioPlaca.bind(this);
+        this.cambioArduino = this.cambioArduino.bind(this);
+        this.cambioEmpresa = this.cambioEmpresa.bind(this);
         this.mostrar = this.mostrar.bind(this);
         this.guardar = this.guardar.bind(this);
         
       }
 
-    cambioName(e){
+    cambioPlaca(e){
         this.setState({
-          name: e.target.value
+          placa: e.target.value
         })
       }
 
-      cambioCorreo(e){
+      cambioArduino(e){
         this.setState({
-          correo: e.target.value
+          arduino: e.target.value
         })
       }
 
-      cambioPassword(e){
+      cambioEmpresa(e){
         this.setState({
-          password: e.target.value
+          empresa: e.target.value
         })
       }
-
-      cambioTipo(e){
-        this.setState({
-          tipo: e.target.value
-        })
-      }
-
       //---------------------------------------------------------------
       //------                   C R U D                          -----
       //---------------------------------------------------------------
@@ -63,7 +54,7 @@ class C10CrudVeh extends Component {
         axios.get(url)
         .then(res =>{
           console.log(res.data);
-          this.setState({usuarios: res.data})
+          this.setState({vehiculos: res.data})
         })
       }
       
@@ -72,12 +63,11 @@ class C10CrudVeh extends Component {
         .then(res => {
           this.setState({
             pos: index,
-            titulo: 'Editar Usuario',
+            titulo: 'Editar Vehiculo',
             id: res.data.id,
-            name :res.data.name,
-            correo: res.data.correo,
-            password: res.data.password,
-            tipo : res.data.tipo,
+            placa :res.data.placa,
+            arduino: res.data.arduino,
+            empresa: res.data.empresa,
             
           })
         })
@@ -87,26 +77,24 @@ class C10CrudVeh extends Component {
         let cod = this.state.id;
         const datos = {
                     
-          name: this.state.name,
-          correo: this.state.correo,
-          password: this.state.password,
-          tipo: this.state.tipo,
+          placa: this.state.placa,
+          arduino: this.state.arduino,
+          empresa: this.state.empresa,
         }
         if(cod>0){
           //edición de un registro
           axios.put(url+'/'+cod,datos)
           .then(res =>{
             let indx = this.state.pos;
-            this.state.postulantes[indx] = res.data;
-            var temp = this.state.usuarios;
+            this.state.vehiculos[indx] = res.data;
+            var temp = this.state.vehiculos;
             this.setState({
                 pos:null,
                 titulo:'Usuario',
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                placa: '',
+                arduino: '',
+                empresa: '',
             });
           }).catch((error) =>{
             console.log(error.toString());
@@ -115,14 +103,13 @@ class C10CrudVeh extends Component {
           //nuevo registro
           axios.post(url,datos)
           .then(res => {
-            this.state.usuarios.push(res.data);
-            var temp = this.state.usuarios;
+            this.state.vehiculos.push(res.data);
+            var temp = this.state.vehiculos;
             this.setState({       
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                placa: '',
+                arduino: '',
+                empresa: '',
             });
           }).catch((error)=>{
             console.log(error.toString());
@@ -134,9 +121,9 @@ class C10CrudVeh extends Component {
         if(rpta){
           axios.delete(url+'/'+cod)
           .then(res =>{
-            var temp = this.state.usuarios.filter((usuarios)=>usuarios.id !== cod);
+            var temp = this.state.vehiculos.filter((vehiculos)=>vehiculos.id !== cod);
             this.setState({
-              usuarios: temp
+              vehiculos: temp
             })
           })
         }
@@ -153,7 +140,7 @@ class C10CrudVeh extends Component {
       Limpiar=()=>{
         this.setState({
                 pos:null,
-                titulo:'Agregar Usuario',
+                titulo:'Agregar Vehiculos',
                 id: 0,
                 name: '',
                 correo: '',
@@ -167,35 +154,31 @@ class C10CrudVeh extends Component {
 
   
   render() {
-    return (
+    return (    
       <div className="C9CrudUser text-center">
         <br /><br /><br />
       <button className="btn btn-success "  onClick={this.AbrirModal}>Agregar</button>
       <br /><br />
           <Container>
-                  <Table striped bordered hover variant="dark">
+                <Table style={{fontWeight:"bold"}} striped borderless hover responsive bgcolor='#eee'>
                   <thead>
                     <tr>
                       <th>Id</th>
-                      <th>Nombre</th>
-                      <th>Correo</th>
-                      <th>Password</th>
-                      <th>Tipo</th>
+                      <th>Placa</th>
+                      <th>Empresa</th>
                       <th>Acciones a Realizar</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {this.state.usuarios.map( (usuarios,index) =>{
+                    {this.state.vehiculos.map( (vehiculos,index) =>{
                       return (
-                        <tr key={usuarios.id}>
-                          <td>{usuarios.id}</td>
-                          <td>{usuarios.name}</td>
-                          <td>{usuarios.correo}</td>
-                          <td type="password">{usuarios.password}</td>
-                          <td>{usuarios.tipo}</td>
+                        <tr key={vehiculos.id}>
+                          <td>{vehiculos.id}</td>
+                          <td>{vehiculos.placa}</td>
+                          <td>{vehiculos.empresa}</td>
                           <td>
-                          <Button variant="success" onClick={()=>{this.mostrar(usuarios.id,index);this.AbrirModal()}}>Editar</Button>&nbsp;&nbsp;
-                          <Button variant="danger" onClick={()=>this.eliminar(usuarios.id)}>Eliminar</Button>
+                          <Button variant="success" onClick={()=>{this.mostrar(vehiculos.id,index);this.AbrirModal()}}>Editar</Button>&nbsp;&nbsp;
+                          <Button variant="danger" onClick={()=>this.eliminar(vehiculos.id)}>Eliminar</Button>
                           </td>
 
 
@@ -216,22 +199,14 @@ class C10CrudVeh extends Component {
                 <Form onSubmit={this.guardar}>
                   <Form.Control type="hidden" value={this.state.id} />
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Nombre:</Form.Label>
-                    <Form.Control type="text" value={this.state.name} onChange={this.cambioName} />
+                    <Form.Label>Ingrese Placa:</Form.Label>
+                    <Form.Control type="text" value={this.state.placa} onChange={this.cambioPlaca} />
                   </Form.Group>
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Correo:</Form.Label>
-                    <Form.Control type="text"  value={this.state.correo} onChange={this.cambioCorreo} />
+                    <Form.Label>Ingrese Empresa:</Form.Label>
+                    <Form.Control type="text"  value={this.state.empresa} onChange={this.cambioEmpresa} />
                   </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Password:</Form.Label>
-                    <Form.Control type="password" value={this.state.password} onChange={this.cambioPassword} />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Tipo:</Form.Label>
-                    <Form.Control type="text" value={this.state.tipo} onChange={this.cambioTipo} />
-                  </Form.Group>
-                  <Button variant="primary" type="submit" >
+                  <Button variant="primary" type="submit" onClick={()=>{this.AbrirModal()}}>
                     GUARDAR</Button>&nbsp;&nbsp;
                     <Button id="cerrar" variant="secondary"  onClick={()=>{this.AbrirModal();this.Limpiar()}} >
                     CANCELAR</Button>
@@ -242,7 +217,6 @@ class C10CrudVeh extends Component {
             </Modal>
 
 
-          
         </div> 
     )
   }

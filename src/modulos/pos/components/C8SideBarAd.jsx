@@ -98,7 +98,7 @@ const C8SideBarAd=()=>{
 
                     <div className="col py-3">
                         <>
-                          <C11CrudRuta/>
+                          <C10CrudVeh/>
                         </>
                     </div>
 

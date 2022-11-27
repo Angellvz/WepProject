@@ -157,8 +157,8 @@ class  C11CrudRuta extends Component {
       <button className="btn btn-success "  onClick={this.AbrirModal}>Agregar</button>
       <br /><br />
           <Container>
-                  <Table striped bordered hover variant="dark">
-                  <thead>
+                  <Table style={{fontWeight:"bold"}} striped borderless hover responsive bgcolor='#eee'>
+                  <thead >
                     <tr>
                       <th>Id</th>
                       <th>Ruta</th>
@@ -209,7 +209,7 @@ class  C11CrudRuta extends Component {
                     <Form.Label>Ingrese id Vehiculo:</Form.Label>
                     <Form.Control  value={this.state.vehiculo} onChange={this.cambioVehiculo} />
                   </Form.Group>
-                  <Button variant="primary" type="submit" >
+                  <Button variant="primary" type="submit" onClick={()=>{this.AbrirModal()}}>
                     GUARDAR</Button>&nbsp;&nbsp;
                     <Button id="cerrar" variant="secondary"  onClick={()=>{this.AbrirModal();this.Limpiar()}} >
                     CANCELAR</Button>
