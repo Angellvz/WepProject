@@ -6,58 +6,45 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
-const url='https://apifinalbd.onrender.com/usuario';
-//test edit
+const url='https://apifinalbd.onrender.com/rutas';
 
-
-
-class C9CrudUser extends Component {
+class  C11CrudRuta extends Component {
       constructor(props) {
         super(props);
         this.state= ({
-          usuarios:[],
+          rutas:[],
           pos:null,
-          titulo:'Agregar Usuario',
+          titulo:'Agregar Ruta',
           id: 0,
-          name: '',
-          correo: '',
-          password: '',
-          tipo: '',
+          ruta: '',
+          empresa: '',
+          vehiculo: '',
         })
         
-        this.cambioName = this.cambioName.bind(this);
-        this.cambioCorreo = this.cambioCorreo.bind(this);
-        this.cambioPassword = this.cambioPassword.bind(this);
-        this.cambioTipo = this.cambioTipo.bind(this);
+        this.cambioRuta = this.cambioRuta.bind(this);
+        this.cambioEmpresa = this.cambioEmpresa.bind(this);
+        this.cambioVehiculo = this.cambioVehiculo.bind(this);
         this.mostrar = this.mostrar.bind(this);
         this.guardar = this.guardar.bind(this);
         
       }
 
-    cambioName(e){
+    cambioRuta(e){
         this.setState({
-          name: e.target.value
+          ruta: e.target.value
         })
       }
 
-      cambioCorreo(e){
+      cambioEmpresa(e){
         this.setState({
-          correo: e.target.value
+          empresa: e.target.value
         })
       }
-
-      cambioPassword(e){
+      cambioVehiculo(e){
         this.setState({
-          password: e.target.value
+          vehiculo: e.target.value
         })
       }
-
-      cambioTipo(e){
-        this.setState({
-          tipo: e.target.value
-        })
-      }
-
       //---------------------------------------------------------------
       //------                   C R U D                          -----
       //---------------------------------------------------------------
@@ -65,7 +52,7 @@ class C9CrudUser extends Component {
         axios.get(url)
         .then(res =>{
           console.log(res.data);
-          this.setState({usuarios: res.data})
+          this.setState({rutas: res.data})
         })
       }
       
@@ -74,12 +61,11 @@ class C9CrudUser extends Component {
         .then(res => {
           this.setState({
             pos: index,
-            titulo: 'Editar Usuario',
+            titulo: 'Editar Ruta',
             id: res.data.id,
-            name :res.data.name,
-            correo: res.data.correo,
-            password: res.data.password,
-            tipo : res.data.tipo,
+            ruta :res.data.ruta,
+            empresa: res.data.empresa,
+            vehiculo: res.data.vehiculo,
             
           })
         })
@@ -89,26 +75,24 @@ class C9CrudUser extends Component {
         let cod = this.state.id;
         const datos = {
                     
-          name: this.state.name,
-          correo: this.state.correo,
-          password: this.state.password,
-          tipo: this.state.tipo,
+          ruta: this.state.ruta,
+          empresa: this.state.empresa,
+          vehiculo: this.state.vehiculo,
         }
         if(cod>0){
           //edición de un registro
           axios.put(url+'/'+cod,datos)
           .then(res =>{
             let indx = this.state.pos;
-            this.state.postulantes[indx] = res.data;
-            var temp = this.state.usuarios;
+            this.state.rutas[indx] = res.data;
+            var temp = this.state.rutas;
             this.setState({
                 pos:null,
-                titulo:'Usuario',
+                titulo:'Agregar Ruta',
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                ruta: '',
+                empresa: '',
+                vehiculo: '',
             });
           }).catch((error) =>{
             console.log(error.toString());
@@ -117,14 +101,13 @@ class C9CrudUser extends Component {
           //nuevo registro
           axios.post(url,datos)
           .then(res => {
-            this.state.usuarios.push(res.data);
-            var temp = this.state.usuarios;
+            this.state.rutas.push(res.data);
+            var temp = this.state.rutas;
             this.setState({       
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                ruta: '',
+                empresa: '',
+                vehiculo: '',
             });
           }).catch((error)=>{
             console.log(error.toString());
@@ -136,7 +119,7 @@ class C9CrudUser extends Component {
         if(rpta){
           axios.delete(url+'/'+cod)
           .then(res =>{
-            var temp = this.state.usuarios.filter((usuarios)=>usuarios.id !== cod);
+            var temp = this.state.rutas.filter((rutas)=>rutas.id !== cod);
             this.setState({
               usuarios: temp
             })
@@ -155,12 +138,11 @@ class C9CrudUser extends Component {
       Limpiar=()=>{
         this.setState({
                 pos:null,
-                titulo:'Agregar Usuario',
+                titulo:'Agregar Ruta',
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                ruta: '',
+                empresa: '',
+                vehiculo: '',
           abierto: !this.state.abierto
           })
       }
@@ -170,7 +152,7 @@ class C9CrudUser extends Component {
   
   render() {
     return (
-      <div className="C9CrudUser text-center">
+      <div className="text-center">
         <br /><br /><br />
       <button className="btn btn-success "  onClick={this.AbrirModal}>Agregar</button>
       <br /><br />
@@ -179,25 +161,23 @@ class C9CrudUser extends Component {
                   <thead>
                     <tr>
                       <th>Id</th>
-                      <th>Nombre</th>
-                      <th>Correo</th>
-                      <th>Password</th>
-                      <th>Tipo</th>
+                      <th>Ruta</th>
+                      <th>Empresa</th>
+                      <th>Vehiculo</th>
                       <th>Acciones a Realizar</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {this.state.usuarios.map( (usuarios,index) =>{
+                    {this.state.rutas.map( (rutas,index) =>{
                       return (
-                        <tr key={usuarios.id}>
-                          <td>{usuarios.id}</td>
-                          <td>{usuarios.name}</td>
-                          <td>{usuarios.correo}</td>
-                          <td type="password">{usuarios.password}</td>
-                          <td>{usuarios.tipo}</td>
+                        <tr key={rutas.id}>
+                          <td>{rutas.id}</td>
+                          <td>{rutas.ruta}</td>
+                          <td>{rutas.empresa}</td>
+                          <td>{rutas.vehiculo}</td>
                           <td>
-                          <Button variant="success" onClick={()=>{this.mostrar(usuarios.id,index);this.AbrirModal()}}>Editar</Button>&nbsp;&nbsp;
-                          <Button variant="danger" onClick={()=>this.eliminar(usuarios.id)}>Eliminar</Button>
+                          <Button variant="success" onClick={()=>{this.mostrar(rutas.id,index);this.AbrirModal()}}>Editar</Button>&nbsp;&nbsp;
+                          <Button variant="danger" onClick={()=>this.eliminar(rutas.id)}>Eliminar</Button>
                           </td>
 
 
@@ -218,20 +198,16 @@ class C9CrudUser extends Component {
                 <Form onSubmit={this.guardar}>
                   <Form.Control type="hidden" value={this.state.id} />
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Nombre:</Form.Label>
-                    <Form.Control type="text" value={this.state.name} onChange={this.cambioName} />
+                    <Form.Label>Ingrese ruta:</Form.Label>
+                    <Form.Control type="text" value={this.state.ruta} onChange={this.cambioRuta} />
                   </Form.Group>
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Correo:</Form.Label>
-                    <Form.Control type="text"  value={this.state.correo} onChange={this.cambioCorreo} />
+                    <Form.Label>Ingrese id Empresa:</Form.Label>
+                    <Form.Control type="text"  value={this.state.empresa} onChange={this.cambioEmpresa} />
                   </Form.Group>
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Password:</Form.Label>
-                    <Form.Control type="password" value={this.state.password} onChange={this.cambioPassword} />
-                  </Form.Group>
-                  <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Tipo:</Form.Label>
-                    <Form.Control type="text" value={this.state.tipo} onChange={this.cambioTipo} />
+                    <Form.Label>Ingrese id Vehiculo:</Form.Label>
+                    <Form.Control  value={this.state.vehiculo} onChange={this.cambioVehiculo} />
                   </Form.Group>
                   <Button variant="primary" type="submit" >
                     GUARDAR</Button>&nbsp;&nbsp;
@@ -249,4 +225,4 @@ class C9CrudUser extends Component {
     )
   }
 }
-export default C9CrudUser;
+export default C11CrudRuta;

@@ -6,12 +6,10 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
-const url='https://apifinalbd.onrender.com/usuario';
-//test edit
+const url='https://apifinalbd.onrender.com/vehiculos';
 
 
-
-class C9CrudUser extends Component {
+class C10CrudVeh extends Component {
       constructor(props) {
         super(props);
         this.state= ({
@@ -249,4 +247,4 @@ class C9CrudUser extends Component {
     )
   }
 }
-export default C9CrudUser;
+export default C10CrudVeh;

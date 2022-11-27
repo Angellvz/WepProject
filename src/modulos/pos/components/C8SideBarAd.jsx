@@ -1,4 +1,6 @@
 import React from 'react';
+import C10CrudVeh from './C10CrudVeh';
+import C11CrudRuta from './C11CrudRuta';
 import C9CrudUser from './C9CrudUser';
 
 const C8SideBarAd=()=>{
@@ -96,7 +98,7 @@ const C8SideBarAd=()=>{
 
                     <div className="col py-3">
                         <>
-                          <C9CrudUser/>
+                          <C11CrudRuta/>
                         </>
                     </div>
 
