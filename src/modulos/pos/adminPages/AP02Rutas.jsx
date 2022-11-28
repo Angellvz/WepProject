@@ -1,12 +1,20 @@
 import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
-import C10CrudVeh from './C10CrudVeh';
-import C11CrudRuta from './C11CrudRuta';
-import C12CrudEmp from './C12CrudEmp';
-import C9CrudUser from './C9CrudUser';
+//import C10CrudVeh from './C10CrudVeh';
+import C11CrudRuta from '../components/C11CrudRuta';
+import C1Navigation from '../components/C1Navigation';
+import C2Footer from '../components/C2Footer';
+//import C12CrudEmp from './C12CrudEmp';
+//import C9CrudUser from './C9CrudUser';
 
-const C8SideBarAd=()=>{
+const AP02Rutas=()=>{
     return(
+        <>
+        <C1Navigation/>
+        <div style={{marginTop:70, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundSize: 'cover',
+                    backgroundAttachment: 'fixed'}}>
         <div className="container-fluid " style={{padding:0}}>
                 <div className="row flex-nowrap" >
                   <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style={{ backgroundColor: "#d8363a" }}>
@@ -15,33 +23,29 @@ const C8SideBarAd=()=>{
                           href="/"
                           className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
                           >
-                          <span className="fs-5 d-none d-sm-inline ">ADMIN</span>
+                          <span className="fs-5 d-none d-sm-inline ">Rutas</span>
                           </a>
                           <ul
                           className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start "
                           id="menu"
                           >
                           <li className="nav-item ">
-                          <a href="#" className="nav-link align-middle px-0">
+                          <a href="/cuser" style={{textDecoration: "none"}} className="ms-1 d-none d-sm-inline text-white">
                           <i className="fs-4 " />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cuser">USUARIOS</Link></span>
+                          <span >USUARIOS</span>
                           </a>
                           </li>
                           <li>
-                          <a
-                          href="#submenu1"
-                          data-bs-toggle="collapse"
-                          className="nav-link px-0 align-middle"
-                          >
+                          
                           <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/crut">RUTAS</Link></span>{" "}
-                          </a>
+                          <span ><Link style={{textDecoration: "none"}} className="ms-1 d-none d-sm-inline text-white" to="/crut">RUTAS</Link></span>{" "}
+                          
                          
                           </li>
                           <li>
-                          <a href="#" className="nav-link px-0 align-middle">
+                          <a href="c/" className="nav-link px-0 align-middle">
                           <i className="fs-4 " />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cveh">VEHICULOS</Link></span>
+                          <span ><Link style={{textDecoration: "none"}} className=" d-none d-sm-inline text-white" to="/cveh">VEHICULOS</Link></span>
                           </a>
                           </li>
 
@@ -100,15 +104,17 @@ const C8SideBarAd=()=>{
 
                     <div className="col py-3">
                         <>
-                          <C9CrudUser/>
+                          <C11CrudRuta/>
                         </>
                     </div>
 
                 </div>
         </div>
-
+        </div>
+        <C2Footer/>
+        </>
 
         
     )
 }
-export default C8SideBarAd
+export default AP02Rutas

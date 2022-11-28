@@ -15,9 +15,14 @@ const P3CrudU=()=>{
         <>  
             
            
-               
-                    <C9CrudUser/>
-                    <C2Footer/>
+                <C1Navigation/>
+                <div style={{marginTop:70, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
+                    backgroundRepeat: 'no-repeat', 
+                    backgroundSize: 'cover',
+                    backgroundAttachment: 'fixed'}}>
+                <C8SideBarAd/>
+                </div>
+                <C2Footer/>
                
          
 

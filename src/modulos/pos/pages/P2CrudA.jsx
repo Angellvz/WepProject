@@ -13,7 +13,6 @@ const P2CrudA=()=>{
     return (
         <>  
             
-            
                 <C1Navigation/>
                 <div style={{marginTop:70, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
                     backgroundRepeat: 'no-repeat', 
