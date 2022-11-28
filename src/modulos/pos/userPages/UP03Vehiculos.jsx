@@ -7,7 +7,7 @@ import C2Footer from '../components/C2Footer';
 //import C12CrudEmp from './C12CrudEmp';
 //import C9CrudUser from './C9CrudUser';
 
-const AP03Vehiculos=()=>{
+const UP03Vehiculos=()=>{
     return(
         <>
         <C1Navigation/>
@@ -23,37 +23,30 @@ const AP03Vehiculos=()=>{
                           
                           className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
                           >
-                          <span className="fs-5 d-none d-sm-inline ">ADMIN</span>
+                          <span className="fs-5 d-none d-sm-inline ">USERS</span>
                           </a>
                           <ul
                           className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start "
                           id="menu"
                           >
-                           <li>
+                          <li>
                           <a  className="nav-link px-0 align-middle">
                           <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cuser">USUARIOS</Link></span>{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/puser">USUARIOS</Link></span>{" "}
                           </a>
                           </li>
 
                           <li>
                           <a  className="nav-link px-0 align-middle">
                           <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cveh">VEHICULOS</Link></span>{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/pveh">VEHICULOS</Link></span>{" "}
                           </a>
                           </li>
 
                           <li>
                           <a  className="nav-link px-0 align-middle">
                           <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/crut">RUTAS</Link></span>{" "}
-                          </a>
-                          </li>
-                          
-                          <li>
-                          <a  className="nav-link px-0 align-middle">
-                          <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cemp">EMPRESAS</Link></span>{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/prut">RUTAS</Link></span>{" "}
                           </a>
                           </li>
 
@@ -125,4 +118,4 @@ const AP03Vehiculos=()=>{
         
     )
 }
-export default AP03Vehiculos
+export default UP03Vehiculos

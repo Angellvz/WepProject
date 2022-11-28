@@ -12,7 +12,7 @@ const C8SideBarAd=()=>{
                   <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style={{ backgroundColor: "#d8363a" }}>
                   <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                           <a
-                          href="/"
+                          
                           className="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-white text-decoration-none"
                           >
                           <span className="fs-5 d-none d-sm-inline ">ADMIN</span>
@@ -21,27 +21,31 @@ const C8SideBarAd=()=>{
                           className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start "
                           id="menu"
                           >
-                          <li className="nav-item ">
-                          <a href="#" className="nav-link align-middle px-0">
-                          <i className="fs-4 " />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cuser">USUARIOS</Link></span>
-                          </a>
-                          </li>
-                          <li>
-                          <a
-                          href="#submenu1"
-                          data-bs-toggle="collapse"
-                          className="nav-link px-0 align-middle"
-                          >
+                           <li>
+                          <a  className="nav-link px-0 align-middle">
                           <i className="fs-4 bi"  />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/crut">RUTAS</Link></span>{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cuser">USUARIOS</Link></span>{" "}
                           </a>
-                         
                           </li>
+
                           <li>
-                          <a href="#" className="nav-link px-0 align-middle">
-                          <i className="fs-4 " />{" "}
-                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cveh">VEHICULOS</Link></span>
+                          <a  className="nav-link px-0 align-middle">
+                          <i className="fs-4 bi"  />{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cveh">VEHICULOS</Link></span>{" "}
+                          </a>
+                          </li>
+
+                          <li>
+                          <a  className="nav-link px-0 align-middle">
+                          <i className="fs-4 bi"  />{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/crut">RUTAS</Link></span>{" "}
+                          </a>
+                          </li>
+                          
+                          <li>
+                          <a  className="nav-link px-0 align-middle">
+                          <i className="fs-4 bi"  />{" "}
+                          <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cemp">EMPRESAS</Link></span>{" "}
                           </a>
                           </li>
 

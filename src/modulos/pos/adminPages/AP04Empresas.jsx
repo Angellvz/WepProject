@@ -1,13 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
 import C10CrudVeh from '../components/C10CrudVeh';
+import C12CrudEmp from '../components/C12CrudEmp';
 import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
 //import C11CrudRuta from '../components/C11CrudRuta';
 //import C12CrudEmp from './C12CrudEmp';
 //import C9CrudUser from './C9CrudUser';
 
-const AP03Vehiculos=()=>{
+const AP04Empresas=()=>{
     return(
         <>
         <C1Navigation/>
@@ -29,7 +30,7 @@ const AP03Vehiculos=()=>{
                           className="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start "
                           id="menu"
                           >
-                           <li>
+                          <li>
                           <a  className="nav-link px-0 align-middle">
                           <i className="fs-4 bi"  />{" "}
                           <span ><Link className="text-white" style={{textDecoration:"none"}}to="/cuser">USUARIOS</Link></span>{" "}
@@ -112,7 +113,7 @@ const AP03Vehiculos=()=>{
 
                     <div className="col py-3">
                         <>
-                          <C10CrudVeh/>
+                          <C12CrudEmp/>
                         </>
                     </div>
 
@@ -125,4 +126,4 @@ const AP03Vehiculos=()=>{
         
     )
 }
-export default AP03Vehiculos
+export default AP04Empresas
