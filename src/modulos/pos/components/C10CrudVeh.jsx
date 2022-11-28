@@ -142,10 +142,9 @@ class C10CrudVeh extends Component {
                 pos:null,
                 titulo:'Agregar Vehiculos',
                 id: 0,
-                name: '',
-                correo: '',
-                password: '',
-                tipo: '',
+                placa: '',
+                arduino: '',
+                empresa: '',
           abierto: !this.state.abierto
           })
       }

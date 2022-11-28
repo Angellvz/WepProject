@@ -1,6 +1,8 @@
 import React from 'react';
+import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
 import C10CrudVeh from './C10CrudVeh';
 import C11CrudRuta from './C11CrudRuta';
+import C12CrudEmp from './C12CrudEmp';
 import C9CrudUser from './C9CrudUser';
 
 const C8SideBarAd=()=>{
@@ -22,7 +24,7 @@ const C8SideBarAd=()=>{
                           <li className="nav-item ">
                           <a href="#" className="nav-link align-middle px-0">
                           <i className="fs-4 " />{" "}
-                          <span className="ms-1 d-none d-sm-inline text-white">USUARIOS</span>
+                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cuser">USUARIOS</Link></span>
                           </a>
                           </li>
                           <li>
@@ -32,14 +34,14 @@ const C8SideBarAd=()=>{
                           className="nav-link px-0 align-middle"
                           >
                           <i className="fs-4 bi"  />{" "}
-                          <span className="ms-1 d-none d-sm-inline text-white">RUTAS</span>{" "}
+                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/crut">RUTAS</Link></span>{" "}
                           </a>
                          
                           </li>
                           <li>
                           <a href="#" className="nav-link px-0 align-middle">
                           <i className="fs-4 " />{" "}
-                          <span className="ms-1 d-none d-sm-inline text-white">VEHÍCULOS</span>
+                          <span ><Link className="ms-1 d-none d-sm-inline text-white" to="/cveh">VEHICULOS</Link></span>
                           </a>
                           </li>
 
@@ -98,7 +100,7 @@ const C8SideBarAd=()=>{
 
                     <div className="col py-3">
                         <>
-                          <C10CrudVeh/>
+                          <C12CrudEmp/>
                         </>
                     </div>
 
