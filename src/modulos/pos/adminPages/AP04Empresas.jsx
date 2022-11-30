@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
 import C10CrudVeh from '../components/C10CrudVeh';
 import C12CrudEmp from '../components/C12CrudEmp';
+import C14NavCrud from '../components/C14NavCrud';
 import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
 //import C11CrudRuta from '../components/C11CrudRuta';
@@ -11,8 +12,8 @@ import C2Footer from '../components/C2Footer';
 const AP04Empresas=()=>{
     return(
         <>
-        <C1Navigation/>
-        <div style={{marginTop:70, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
+        <C14NavCrud/>
+        <div style={{marginTop:80, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
                     backgroundRepeat: 'no-repeat', 
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed'}}>
@@ -58,52 +59,6 @@ const AP04Empresas=()=>{
                           </a>
                           </li>
 
-                          <li>
-                          <div className="dropdown pb-4 ms-1 d-none d-sm-inline">
-                          <a
-                          href="#"
-                          className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                          id="dropdownUser1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          >
-                          <img
-                          src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
-                          alt="hugenerd"
-                          width={30}
-                          height={30}
-                          className="rounded-circle"
-                          />
-                          <span className="d-none d-sm-inline mx-1">User</span>
-                          </a>
-                          <ul
-                          className="dropdown-menu text-small " aria-labelledby="dropdownUser1">
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  New project...
-                          </a>
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Settings
-                          </a>
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Profile
-                          </a>
-                          </li>
-                          <li>
-                          <hr className="dropdown-divider" />
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Sign out
-                          </a>
-                          </li>
-                          </ul>
-                          </div>
-                          </li>
                           
                           
                           </ul>

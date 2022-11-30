@@ -1,6 +1,5 @@
 import React from 'react'
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './modulos/pos/pages/P1Inicio'
 import P2CrudA from './modulos/pos/pages/P2CrudA';
@@ -14,9 +13,10 @@ import AP04Empresas from './modulos/pos/adminPages/AP04Empresas';
 import UP01Usuarios from './modulos/pos/userPages/UP01Usuarios';
 import UP03Vehiculos from './modulos/pos/userPages/UP03Vehiculos';
 import UP02Rutas from './modulos/pos/userPages/UP02Rutas';
+import Registro from './modulos/pos/pages/Registro';
 const App = () => {
       return (
-        <>
+        
         <BrowserRouter>
          <Routes>
             <Route path="/" element={<P1Inicio/>}></Route>
@@ -32,10 +32,14 @@ const App = () => {
                 <Route exact path="/puser" element={<UP01Usuarios/>}></Route>
                 <Route exact path="/pveh" element={<UP03Vehiculos/>}></Route>
                 <Route exact path="/prut" element={<UP02Rutas/>}></Route>
+
+                <Route  exact path="/registro" element={<Registro/>}/>
+                <Route  exact path="/login" element={<Login/>}/> 
+                
             <Route exact path="*" element={<h2>Page not found 404</h2>}></Route>
          </Routes>
         </BrowserRouter>
-        </>
+        
         
       )
     }

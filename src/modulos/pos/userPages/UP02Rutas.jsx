@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
 //import C10CrudVeh from './C10CrudVeh';
 import C11CrudRuta from '../components/C11CrudRuta';
+import C14NavCrud from '../components/C14NavCrud';
 import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
 //import C12CrudEmp from './C12CrudEmp';
@@ -10,8 +11,8 @@ import C2Footer from '../components/C2Footer';
 const UP02Rutas=()=>{
     return(
         <>
-        <C1Navigation/>
-        <div style={{marginTop:70, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
+        <C14NavCrud/>
+        <div style={{marginTop:80, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
                     backgroundRepeat: 'no-repeat', 
                     backgroundSize: 'cover',
                     backgroundAttachment: 'fixed'}}>

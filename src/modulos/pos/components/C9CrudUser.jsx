@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
-const url='https://apifinalbd.onrender.com/usuario';
+const url='http://localhost:3000/usuario';
 //test edit
 
 
@@ -84,6 +84,8 @@ class C9CrudUser extends Component {
           })
         })
       }
+
+
       guardar(e){
         e.preventDefault();
         let cod = this.state.id;

@@ -49,52 +49,7 @@ const C8SideBarAd=()=>{
                           </a>
                           </li>
 
-                          <li>
-                          <div className="dropdown pb-4 ms-1 d-none d-sm-inline">
-                          <a
-                          href="#"
-                          className="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
-                          id="dropdownUser1"
-                          data-bs-toggle="dropdown"
-                          aria-expanded="false"
-                          >
-                          <img
-                          src="https://t4.ftcdn.net/jpg/02/29/75/83/360_F_229758328_7x8jwCwjtBMmC6rgFzLFhZoEpLobB6L8.jpg"
-                          alt="hugenerd"
-                          width={30}
-                          height={30}
-                          className="rounded-circle"
-                          />
-                          <span className="d-none d-sm-inline mx-1">User</span>
-                          </a>
-                          <ul
-                          className="dropdown-menu text-small " aria-labelledby="dropdownUser1">
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  New project...
-                          </a>
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Settings
-                          </a>
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Profile
-                          </a>
-                          </li>
-                          <li>
-                          <hr className="dropdown-divider" />
-                          </li>
-                          <li>
-                          <a className="dropdown-item" href="#">
-                                  Sign out
-                          </a>
-                          </li>
-                          </ul>
-                          </div>
-                          </li>
+                          
                           
                           
                           </ul>
