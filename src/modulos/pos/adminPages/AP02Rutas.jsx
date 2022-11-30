@@ -7,6 +7,8 @@ import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
 //import C12CrudEmp from './C12CrudEmp';
 //import C9CrudUser from './C9CrudUser';
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 
 const AP02Rutas=()=>{
     return(

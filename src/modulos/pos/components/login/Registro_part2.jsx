@@ -10,7 +10,7 @@ const Registro_part2 =( )=>{
           <h4 className="mb-4">Para hacer más eficiente tu vida y el transporte público</h4>
           <img
            
-              src="../../../../src/assets/img/image.jpeg"
+              src="../../../../src/assets/img/image.jfif"
               style={{ width: 300 }}
               alt="logo"
             />

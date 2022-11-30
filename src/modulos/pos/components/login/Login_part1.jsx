@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 
 
 //const url="https://apifinalbd.onrender.com/usuario";
-const url="http://192.168.31.1:3000/usuarios";
+const url="http://localhost:3000/usuarios";
 const cookies=new Cookies();
 
 const Login_part1 =( )=>{
@@ -42,9 +42,9 @@ const Login_part1 =( )=>{
           cookies.set('tipo',res.tipo,{path:"/"})
           alert(`Bienvenido ${res.name}--- tu correo es: ${res.correo} --- Eres tipo ${res.tipo}`)
           if(`${res.tipo}`=="U"){          
-            window.location.href="./pprincipal";
-          }else if(`${res.tipo}`=="P"){
-            window.location.href="./padmin";
+            window.location.href="./test";
+          }else if(`${res.tipo}`=="A"){
+            window.location.href="./admin";
           }else{
             console.log("ta mal")
           }
@@ -62,7 +62,14 @@ const Login_part1 =( )=>{
 
   useEffect(()=>{
     if(cookies.get('name')){
-      window.location.href="./pprincipal";
+        if(`${cookies.get('tipo')}`=="U"){          
+            window.location.href="./test";
+          }else if (`${cookies.get('tipo')}`=="A"){
+            window.location.href="./admin";
+          }else{
+            console.log("ta mal")
+          }
+      
       alert('ya estas registrado')
     }
   },[datos])
@@ -117,6 +124,14 @@ const Login_part1 =( )=>{
               >
                 Iniciar sesión
               </button>
+              <div className="d-flex align-items-center justify-content-center pb-4">
+              <Link to={"/"}>
+              <button type="button" className="btn btn-outline-danger">
+                Cancelar
+              </button>
+              </Link>
+              
+            </div>
               
             </div>
             <div className="d-flex align-items-center justify-content-center pb-4">

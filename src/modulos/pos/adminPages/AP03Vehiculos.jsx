@@ -7,7 +7,8 @@ import C2Footer from '../components/C2Footer';
 //import C11CrudRuta from '../components/C11CrudRuta';
 //import C12CrudEmp from './C12CrudEmp';
 //import C9CrudUser from './C9CrudUser';
-
+import Cookies from 'universal-cookie';
+const cookies = new Cookies();
 const AP03Vehiculos=()=>{
     return(
         <>

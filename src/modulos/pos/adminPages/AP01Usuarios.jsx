@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
+import Cookies from 'universal-cookie';
 import C14NavCrud from '../components/C14NavCrud';
 import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
@@ -7,7 +8,15 @@ import C2Footer from '../components/C2Footer';
 //import C11CrudRuta from './C11CrudRuta';
 //import C12CrudEmp from './C12CrudEmp';
 import C9CrudUser from '../components/C9CrudUser';
-
+const cookies = new Cookies();
+const cerrarSesion = () => {
+  cookies.remove("id", { path: "/" });
+  cookies.remove("name", { path: "/" });
+  cookies.remove("correo", { path: "/" });
+  cookies.remove("password", { path: "/" });
+  cookies.remove("tipo", { path: "/" });
+  window.location.href = "./";
+};
 const AP01Usuarios=()=>{
 
     return(

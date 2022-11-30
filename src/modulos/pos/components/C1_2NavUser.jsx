@@ -9,7 +9,8 @@ const cerrarSesion = () => {
     cookies.remove("tipo", { path: "/" });
     window.location.href = "./";
   };
-const C14NavCrud = () => {
+const C1_2NavUser = () => {
+    
 return (
     <nav style={{ backgroundColor: "#d8363a" }} className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div className="container px-5">
@@ -20,28 +21,24 @@ return (
                 height={30}
                 alt=""
                 />Your Street</a>
-            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i className="bi-list"></i>
+            </button>
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
-
-                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="#download">
-                    <button type="button" class="btn btn-info">Acerca de..</button>
-                        </a></li>
-                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " >
-                    <button onClick={() => cerrarSesion()}  type="button" class="btn btn-secondary">
-                    <img  src="../../../src/assets/img/logoutic.png " 
-                    width={20}
-                    height={20}
-                    alt=""
-                    />  
-                    Cerrar Sesión</button>
-                        </a></li>
+                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="#features">Características</a></li>
+                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="#download">Descargar</a></li>
                 </ul>
+                
+                <button className="btn btn-primary" onClick={() => cerrarSesion()}>
+                Cerrar sesion
+                </button>
                 
             </div>
         </div>
     </nav>
     );
 };
-export default C14NavCrud ;
+export default C1_2NavUser
 

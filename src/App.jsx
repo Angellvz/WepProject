@@ -1,10 +1,8 @@
 import React from 'react'
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Login from './modulos/pos/pages/P1Inicio'
 import P2CrudA from './modulos/pos/pages/P2CrudA';
 import P1Inicio from './modulos/pos/pages/P1Inicio';
-import C1Navigation from './modulos/pos/components/C1Navigation';
 import P3CrudU from './modulos/pos/pages/P3CrudU';
 import AP01Usuarios from './modulos/pos/adminPages/AP01Usuarios';
 import AP02Rutas from './modulos/pos/adminPages/AP02Rutas';
@@ -14,6 +12,8 @@ import UP01Usuarios from './modulos/pos/userPages/UP01Usuarios';
 import UP03Vehiculos from './modulos/pos/userPages/UP03Vehiculos';
 import UP02Rutas from './modulos/pos/userPages/UP02Rutas';
 import Registro from './modulos/pos/pages/Registro';
+import Login from './modulos/pos/pages/Login';
+import P4User from './modulos/pos/pages/P4User';
 const App = () => {
       return (
         
@@ -35,6 +35,8 @@ const App = () => {
 
                 <Route  exact path="/registro" element={<Registro/>}/>
                 <Route  exact path="/login" element={<Login/>}/> 
+
+                <Route exact path="/test" element={<P4User/>}/> 
                 
             <Route exact path="*" element={<h2>Page not found 404</h2>}></Route>
          </Routes>

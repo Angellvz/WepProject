@@ -3,7 +3,7 @@ import axios from "axios";
 import Cookies from 'universal-cookie';
 import { Link } from "react-router-dom";
 
-const url="http://192.168.31.1:3000/usuarios";
+const url="http://localhost:3000/usuarios";
 const cookies=new Cookies();
 const Registro_part1 =( )=>{
   const[datos,setDatos]=useState({
@@ -80,7 +80,7 @@ const Registro_part1 =( )=>{
         cookies.remove("password", { path: "/" });
         cookies.remove("tipo", { path: "/" });
         alert("Registro Exitoso, Intente Logearse denuevo")
-        window.location.href="./";
+        window.location.href="./login";
     }
     
   }

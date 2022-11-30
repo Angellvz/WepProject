@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 
-const url='http://localhost:3000/usuario';
+const url='http://localhost:3000/usuarios';
 //test edit
 
 
