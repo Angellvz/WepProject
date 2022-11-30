@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "universal-cookie";
 
-const url = "http://192.168.31.1:3000/usuarios"; //esto es para jalar el valor
+const url = "http://localhost:3000/usuarios"; //esto es para jalar el valor
 const cookies = new Cookies();
 const Pprincipal = () => {
   //ingreso los datos envaidos por las cukis
