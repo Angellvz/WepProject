@@ -3,7 +3,7 @@ const C1Navigation = () => {
 return (
     <nav  className="gradient-custom-2 navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div className="container px-5">
-            <a className="navbar-brand text-white fw-bold" href="#page-top">
+            <a className="navbar-brand text-white fw-bold" href="/">
                 <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Aiga_bus_on_red_circle.svg/1024px-Aiga_bus_on_red_circle.svg.png"
                 width={30}

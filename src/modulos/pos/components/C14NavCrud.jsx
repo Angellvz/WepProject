@@ -13,7 +13,7 @@ const C14NavCrud = () => {
 return (
     <nav  className="gradient-custom-2 navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div className="container px-5">
-            <a className="navbar-brand text-white fw-bold" href="#page-top">
+            <a className="navbar-brand text-white fw-bold" href="/admin">
                 <img
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Aiga_bus_on_red_circle.svg/1024px-Aiga_bus_on_red_circle.svg.png"
                 width={30}
@@ -24,7 +24,7 @@ return (
             <div className="collapse navbar-collapse" id="navbarResponsive">
                 <ul className="navbar-nav ms-auto me-4 my-3 my-lg-0">
 
-                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="#download">
+                    <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="https://www.google.com/maps">
                     <button type="button" class="btn btn-info">Acerca de..</button>
                         </a></li>
                     <li className="nav-item"><a class="nav-link me-lg-3 text-white " >
