@@ -2,15 +2,12 @@ import React from 'react'
 
 function C5Header() {
   return (
-    <header style={{ backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
-    backgroundRepeat: 'no-repeat', 
-    backgroundSize: 'cover',
-    backgroundAttachment: 'fixed'}} className="masthead">
+    <header  className="masthead bg-black ">
         <div  className="container px-5">
-            <div className="row gx-5 align-items-center">
+            <div className="row gx-5 align-items-center text-white">
             <div className="col-lg-6">
-                <div className="mb-5 mb-lg-0 text-center text-white font-weight-bold text-lg-start font-alt">
-                <h1 className="display-1 lh-1 mb-3">
+                <div className="mb-5 mb-lg-0 text-center  font-weight-bold text-lg-start font-alt" >
+                <h1 className="display-1 lh-1 mb-3" >
                     YOUR STREET
                 </h1>
                 <p className="lead fw-normal mb-5 ">
@@ -20,14 +17,14 @@ function C5Header() {
                     <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
                     <img
                         className="app-badge rounded"
-                        src="../../../src/assets/img/megaicon.png"
+                        src="../../../src/assets/img/google-play-badge.svg"
                         alt="..."
                     />
                     </a>
                     <a href="#!">
                     <img
                         className="app-badge rounded"
-                        src="../../../src/assets/img/Google-Drive-.jpg"
+                        src="../../../src/assets/img/app-store-badge.svg"
                         alt="..."
                     />
                     </a>

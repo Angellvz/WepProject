@@ -28,7 +28,7 @@ class C12CrudEmp extends Component {
 
     cambioNombre(e){
         this.setState({
-          placa: e.target.value
+          nombre: e.target.value
         })
       }
       //---------------------------------------------------------------
@@ -59,7 +59,7 @@ class C12CrudEmp extends Component {
         let cod = this.state.id;
         const datos = {
                     
-          empresa: this.state.empresa,
+          nombre: this.state.nombre,
         }
         if(cod>0){
           //edición de un registro
@@ -171,7 +171,7 @@ class C12CrudEmp extends Component {
                 <Form onSubmit={this.guardar}>
                   <Form.Control type="hidden" value={this.state.id} />
                   <Form.Group className="mb-3">
-                    <Form.Label>Ingrese Placa:</Form.Label>
+                    <Form.Label>Ingrese Empresa:</Form.Label>
                     <Form.Control type="text" value={this.state.nombre} onChange={this.cambioNombre} />
                   </Form.Group>
                   <Button variant="primary" type="submit" onClick={()=>{this.AbrirModal()}}>

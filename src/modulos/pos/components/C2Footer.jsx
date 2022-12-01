@@ -7,9 +7,9 @@ return (
                     <div className="mb-2">&copy; Your Street 2022. Todos los derechos reservados.</div>
                     <a href="https://loremipsumasesoria.com/politica-de-privacidad/">Politica de privacidad</a>
                     <span className="mx-1">&middot;</span>
-                    <a href="#!">Terminos y condiciones</a>
+                    <a href="https://www.sociedadenmovimiento.com/es/terminos-y-condiciones-PG11">Terminos y condiciones</a>
                     <span className="mx-1">&middot;</span>
-                    <a href="#!">Preguntas Frecuentes</a>
+                    <a href="https://www.mundialderemates.com/preguntas-frecuentes/">Preguntas Frecuentes</a>
                 </div>
             </div>
     </footer>

@@ -20,12 +20,14 @@ return (
                     <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="#download">Descargar</a></li>
                     <li className="nav-item"><a class="nav-link me-lg-3 text-white " href="/login">Login</a></li>
                 </ul>
-                <button  className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+                <a href="https://www.linkedin.com/in/luis-angel-ventura-valenzuela-bb6aa2254/">
+                <button className="btn btn-primary rounded-pill px-3 mb-2 mb-lg-0" data-bs-toggle="modal" >
                     <span className="d-flex align-items-center">
                         <i className="bi-chat-text-fill me-2"></i>
                         <span className="small" >Enviar Comentarios</span>
                     </span>
                 </button>
+                </a>
             </div>
         </div>
     </nav>

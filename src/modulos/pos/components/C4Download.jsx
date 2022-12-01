@@ -8,14 +8,14 @@ return (
                     <a className="me-lg-3 mb-4 mb-lg-0" href="#!">
                     <img
                         className="app-badge rounded"
-                        src="../../../src/assets/img/megaicon.png"
+                        src="../../../src/assets/img/google-play-badge.svg"
                         alt="..."
                     />
                     </a>
                     <a href="#!">
                     <img
                         className="app-badge rounded"
-                        src="../../../src/assets/img/Google-Drive-.jpg"
+                        src="../../../src/assets/img/app-store-badge.svg"
                         alt="..."
                     />
                     </a>
