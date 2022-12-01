@@ -1,6 +1,4 @@
-import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
-import Cookies from 'universal-cookie';
 import C14NavCrud from '../components/C14NavCrud';
 import C1Navigation from '../components/C1Navigation';
 import C2Footer from '../components/C2Footer';
@@ -8,16 +6,34 @@ import C2Footer from '../components/C2Footer';
 //import C11CrudRuta from './C11CrudRuta';
 //import C12CrudEmp from './C12CrudEmp';
 import C9CrudUser from '../components/C9CrudUser';
+import Cookies from "universal-cookie";
+import axios from 'axios'
+import React, {useState, useEffect } from "react";
+const url = "http://localhost:3000/usuarios"; //esto es para jalar el valor
 const cookies = new Cookies();
-const cerrarSesion = () => {
-  cookies.remove("id", { path: "/" });
-  cookies.remove("name", { path: "/" });
-  cookies.remove("correo", { path: "/" });
-  cookies.remove("password", { path: "/" });
-  cookies.remove("tipo", { path: "/" });
-  window.location.href = "./";
-};
+
 const AP01Usuarios=()=>{
+  const [datos, setDatos] = useState({ id: `${cookies.get("id")}`, name: `${cookies.get("name")}`,});
+
+  useEffect(() => {
+    const jname = async () => {
+      //http://192.168.31.1:3000/usuarios?id=1&name=Angel
+      await axios.get(url, { params: { id: datos.id, name: datos.email } })
+        .then((response) => {
+          return response.data;
+        })
+        .then((response) => {
+          if (response.length > 0) {
+            console.log("usuario existente ,Logeo correcto");
+          } else {
+            //si el usuario no se registro no podra entrar
+            console.log("no te logeaste gil ");
+            window.location.href = "./";
+          }
+        });
+    };
+    jname();//se ejcuta la funcion
+  }, [datos])
 
     return(
         <>

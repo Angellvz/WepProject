@@ -33,7 +33,7 @@ class C9CrudUser extends Component {
         this.guardar = this.guardar.bind(this);
         
       }
-
+      
     cambioName(e){
         this.setState({
           name: e.target.value
