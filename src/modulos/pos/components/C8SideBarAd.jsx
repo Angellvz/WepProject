@@ -1,15 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes,Route,Link } from 'react-router-dom';
-import C10CrudVeh from './C10CrudVeh';
-import C11CrudRuta from './C11CrudRuta';
-import C12CrudEmp from './C12CrudEmp';
 import C9CrudUser from './C9CrudUser';
 
 const C8SideBarAd=()=>{
     return(
-        <div className="container-fluid " style={{padding:0}}>
+        <div className="container-fluid gradient-form" style={{padding:0}}>
                 <div className="row flex-nowrap" >
-                  <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style={{ backgroundColor: "#d8363a" }}>
+                  <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark bg-opacity-100 bg" >
                   <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                           <a
                           

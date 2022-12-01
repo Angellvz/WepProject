@@ -40,13 +40,10 @@ const AP02Rutas=()=>{
     return(
         <>
         <C14NavCrud/>
-        <div style={{marginTop:80, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
-                    backgroundRepeat: 'no-repeat', 
-                    backgroundSize: 'cover',
-                    backgroundAttachment: 'fixed'}}>
+        <div className="bg-danger bg-opacity-25" style={{marginTop:80}}>
         <div className="container-fluid " style={{padding:0}}>
                 <div className="row flex-nowrap" >
-                  <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 " style={{ backgroundColor: "#d8363a" }}>
+                  <div className="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark bg-opacity-100 ">
                   <div className="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
                           <a
                           

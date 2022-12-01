@@ -1,8 +1,8 @@
 import React from 'react';
 const C7Eslogan = () => {
 return (
-    <aside className="text-center " style={{ backgroundColor: "#d8363a" }}>
-        <div className="container px-5">
+    <aside className="text-center gradient-custom-2" >
+        <div className="container px-5 ">
             <div className="row gx-5 justify-content-center">
                 <div className="col-xl-8">
                     <div className="h2 fs-1 text-white mb-4">

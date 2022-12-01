@@ -35,10 +35,7 @@ const P2CrudA=()=>{
         <>  
             
                 <C14NavCrud/>
-                <div style={{marginTop:80, backgroundImage: 'url("../../../src/assets/img/imgbackg.jpg")', 
-                    backgroundRepeat: 'no-repeat', 
-                    backgroundSize: 'cover',
-                    backgroundAttachment: 'fixed'}}>
+                <div className="bg-danger bg-opacity-25"style={{marginTop:80}}>
                 <C8SideBarAd/>
                 </div>
                 <C2Footer/>

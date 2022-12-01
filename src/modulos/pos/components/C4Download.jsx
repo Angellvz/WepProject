@@ -1,8 +1,8 @@
 import React from 'react';
 const C4Download = () => {
 return (
-    <section style={{ backgroundColor: "#d8363a" }} id="download">
-            <div class="container px-5">
+    <section className='gradient-custom-2' id="download">
+            <div class="container px-5 ">
                 <h2 class="text-center text-white font-alt mb-4">Obtén la aplicación ahora!</h2>
                 <div className="d-flex justify-content-center ">
                     <a className="me-lg-3 mb-4 mb-lg-0" href="#!">

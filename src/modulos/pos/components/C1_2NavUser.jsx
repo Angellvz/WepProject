@@ -12,7 +12,7 @@ const cerrarSesion = () => {
 const C1_2NavUser = () => {
     
 return (
-    <nav style={{ backgroundColor: "#d8363a" }} className="navbar navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
+    <nav  className="navbar gradient-custom-2 navbar-expand-lg navbar-light fixed-top shadow-sm" id="mainNav">
         <div className="container px-5">
             <a className="navbar-brand text-white fw-bold" href="#page-top">
                 <img
