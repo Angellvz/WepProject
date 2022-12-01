@@ -11,20 +11,19 @@ return (
               <div className="row gx-5">
                 <div className="col-md-6 mb-5">
                   <div className="text-center">
-                    <i className="bi-phone icon-feature text-gradient d-block mb-3" />
-                    <h3 className="font-alt">Device Mockups</h3>
+                    <i className="bi-geo-alt-fill icon-feature text-gradient d-block mb-3" />
+                    <h3 className="font-alt">Ubicación</h3>
                     <p className="text-muted mb-0">
-                      Ready to use HTML/CSS device mockups, no Photoshop required!
+                      Obtiene y te muestra las rutas del transporte publico de tu ciudad
                     </p>
                   </div>
                 </div>
                 <div className="col-md-6 mb-5">
                   <div className="text-center">
-                    <i className="bi-camera icon-feature text-gradient d-block mb-3" />
-                    <h3 className="font-alt">Flexible Use</h3>
+                    <i className="bi-gift icon-feature text-gradient d-block mb-3" />
+                    <h3 className="font-alt">Uso Gratuito</h3>
                     <p className="text-muted mb-0">
-                      Put an image, video, animation, or anything else in the
-                      screen!
+                      Se pueden usar todas sus funcionalidades de manera gratuita, Descargalo Gratis
                     </p>
                   </div>
                 </div>
@@ -32,21 +31,19 @@ return (
               <div className="row">
                 <div className="col-md-6 mb-5 mb-md-0">
                   <div className="text-center">
-                    <i className="bi-gift icon-feature text-gradient d-block mb-3" />
-                    <h3 className="font-alt">Free to Use</h3>
+                    <i className="bi-chat icon-feature text-gradient d-block mb-3" />
+                    <h3 className="font-alt">Comentarios</h3>
                     <p className="text-muted mb-0">
-                      As always, this theme is free to download and use for any
-                      purpose!
+                      Envia comentarios y califica las unidades de transporte publico que utilizes
                     </p>
                   </div>
                 </div>
                 <div className="col-md-6">
                   <div className="text-center">
-                    <i className="bi-patch-check icon-feature text-gradient d-block mb-3" />
-                    <h3 className="font-alt">Open Source</h3>
+                    <i className="bi-signpost-fill icon-feature text-gradient d-block mb-3" />
+                    <h3 className="font-alt">Paraderos</h3>
                     <p className="text-muted mb-0">
-                      Since this theme is MIT licensed, you can use it
-                      commercially!
+                      Te muestra los paraderos del transporte publico cercanos a tu ubicación.
                     </p>
                   </div>
                 </div>
